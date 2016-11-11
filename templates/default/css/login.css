@@ -4,7 +4,7 @@ PAGE BODY
 body {
 	font-family:"Lucida Grande", verdana, arial, helvetica, sans-serif;
 	color:#333;
-	background-color:#e5e5e5;
+	background-color:#ffffff;
 	text-align:center;
 	margin:0 auto;
 	padding:0; }
@@ -18,9 +18,9 @@ DIALOG BOX
 -------------------------------------------------*/
 .DialogBody {
 	text-align:left;
-	border:1px solid #ccc;
-	border-right:1px solid #999;
-	border-bottom:1px solid #999;
+	border:0px solid #ccc;
+	border-right:0px solid #999;
+	border-bottom:0px solid #999;
 	background-color:#fff;
 	margin:0;
 	padding:10px; }
@@ -149,10 +149,14 @@ LOGIN SCREEN (.login is body class)
 	margin:10px 0 20px; }
 
 .login div#Dialog {
-	border:10px solid #ccc;
+	border:1px solid #ccc;
 	text-align:left;
 	background:#fff;
-	padding:15px 20px 10px; }
+	padding:15px 20px 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.login div#Title{
+	color: #ff4411; font-size: 25px; font-family: 'Signika', sans-serif; padding-bottom: 10px;
+}
 
 body.login div#Dialog h2 {
 	margin:0;
