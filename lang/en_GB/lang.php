@@ -571,4 +571,5 @@ $LANG['years'] = "years";//1
 $LANG['yes'] = "Yes";//1
 $LANG['your_reports'] = "Your reports";//1
 $LANG['zip'] = "Zip code";//1
+$LANG['cost'] = "Cost";//1
 ?>

@@ -15,6 +15,7 @@ class matrix_invoice
 			$invoiceItem['unit_price'] = $invoiceItem['unit_price'];
 			$invoiceItem['tax_amount'] = $invoiceItem['tax_amount'];
 			$invoiceItem['gross_total'] = $invoiceItem['gross_total'];
+			$invoiceItem['cost'] = $invoiceItem['cost'];
 			$invoiceItem['total'] = $invoiceItem['total'];
 			
 			$sql = "SELECT * FROM ".TB_PREFIX."products WHERE id = :id";

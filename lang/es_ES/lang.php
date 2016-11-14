@@ -440,4 +440,5 @@ $LANG['whats_this_page_about'] = "&iquest;De qu&eacute; trata esta p&aacute;gina
 $LANG['wheres_the_edit_button'] = "Wheres the edit button ";//0
 $LANG['yes'] = "Si";//1
 $LANG['zip'] = "C&oacute;digo postal";//1
+$LANG['cost'] = "Costo";//1
 ?>

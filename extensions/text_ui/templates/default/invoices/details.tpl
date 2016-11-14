@@ -124,6 +124,7 @@
         	        <td class="details_screen">{$LANG.attribute_short} 1</td>
         	        <td class="details_screen">{$LANG.attribute_short} 2</td>
         	        <td class="details_screen">{$LANG.unit_price}</td>
+        	       
 	        </tr>
 	{/if}
 
@@ -221,6 +222,7 @@
 			<a href="./index.php?module=invoices&amp;view=add_invoice_item&amp;invoice={$invoice.id}&amp;type={$invoice.type_id}&amp;tax_id={$invoiceItems.0.tax_id}"><img src="./images/common/famfamAdd.png" alt="" />{$LANG.add_invoice_item}</a>
 		</td>
 		<td>
+		
 		</td>
 	</tr>
 
