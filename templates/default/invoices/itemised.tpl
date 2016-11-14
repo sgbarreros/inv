@@ -120,6 +120,7 @@
 					<td class="details_screen">{$LANG.tax} {if $defaults.tax_per_line_item > 1}{$smarty.section.tax_header.index+1|htmlsafe}{/if} </td>
 				{/section}
 				<td class="details_screen">{$LANG.unit_price}</td>
+				<td class="details_screen">Costo</td>
 			</tr>
 			</tbody>
 	
@@ -235,7 +236,8 @@
 								{/if}
                                 {if $smarty.section.line.index == "0"} class="validate[required]" {/if}
 							/>
-						</td>	
+						</td>
+						<td><input type="text" id="cost" size="7"></input></td>	
 					</tr>
 							
 					<tr class="note">

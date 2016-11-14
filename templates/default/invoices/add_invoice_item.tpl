@@ -29,6 +29,7 @@
 			</td>
 			<td>
 				<input type="text" id="quantity1" name="quantity1" size="5" />
+				
 			</td>
 		</tr>
 		<tr>
@@ -60,6 +61,7 @@
 			<td>
 				<input id="unit_price1" name="unit_price1" size="7" value="{$invoiceItem.unit_price|number_format:2}" />
 			</td>
+			
 		</tr>
  
 		{if $type == 3}               
