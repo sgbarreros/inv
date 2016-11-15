@@ -36,6 +36,7 @@
         	<td><input type="text" size="10" class="date-picker" name="date" id="date1" value="{$invoice.calc_date|htmlsafe}" /></td>
 	{/if}
 	</tr>
+
 	<tr>
 		<td class="details_screen">{$LANG.biller}</td><td>
 			
@@ -241,6 +242,9 @@
 						{/section}
 						<td>
 							<input id="unit_price{$line|htmlsafe}" name="unit_price{$line|htmlsafe}" size="7" value="{$invoiceItem.unit_price|siLocal_number_clean}" />
+						</td>
+						<td>
+							<input id="cost{$line|htmlsafe}" name="cost{$line|htmlsafe}" size="7" value="{$invoiceItem.cost|siLocal_number_clean}" />
 						</td>
 			        </tr>
 		            	<tr colspan="6" class="note">
