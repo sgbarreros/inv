@@ -127,7 +127,7 @@ if ($_POST['action'] == "insert" ) {
 				
 				if($_POST["line_item$i"] != "")
 				{
-					updateInvoiceItem($_POST["line_item$i"],$_POST["quantity$i"],$_POST["products$i"],$i,$_POST['tax_id'][$i],$_POST["description$i"],$_POST["unit_price$i"]);
+					//updateInvoiceItem($_POST["line_item$i"],$_POST["quantity$i"],$_POST["products$i"],$i,$_POST['tax_id'][$i],$_POST["description$i"],$_POST["unit_price$i"]);
 					$saved;
 					//$saved =  true;
 /*
