@@ -10,14 +10,14 @@ class matrix_invoice
 		$invoiceItems = null;
 		
 		for($i=0;$invoiceItem = $sth->fetch();$i++) {
-		
+		//Gets values from invoice_items table
 			$invoiceItem['quantity'] = $invoiceItem['quantity'];
 			$invoiceItem['unit_price'] = $invoiceItem['unit_price'];
 			$invoiceItem['tax_amount'] = $invoiceItem['tax_amount'];
 			$invoiceItem['gross_total'] = $invoiceItem['gross_total'];
 			$invoiceItem['cost'] = $invoiceItem['cost'];
 			$invoiceItem['total'] = $invoiceItem['total'];
-			
+		//Gets values from products table by product_id
 			$sql = "SELECT * FROM ".TB_PREFIX."products WHERE id = :id";
 			$tth = dbQuery($sql, ':id', $invoiceItem['product_id']) or die(htmlsafe(end($dbh->errorInfo())));
 			$invoiceItem['product'] = $tth->fetch();	
@@ -70,13 +70,11 @@ class matrix_invoice
 			$attr_all_1 = dbQuery($attr_all_sql, ':attr_id', $invoiceItem['attribute_1'], ':pid', $invoiceItem['product_id'], ':aid',$invoiceItem['attr1']['aid'] ) or die(htmlsafe(end($dbh->errorInfo())));
             $invoiceItem['attr_all_1'] = $attr_all_1->fetchAll();
 
-
 			$attr2 = dbQuery($attr_sql, ':attr_id', $invoiceItem['attribute_2'], ':pid',$invoiceItem['product_id']) or die(htmlsafe(end($dbh->errorInfo())));
             $invoiceItem['attr2'] = $attr2->fetch();
             
 			$attr_all_2 = dbQuery($attr_all_sql, ':attr_id', $invoiceItem['attribute_2'], ':pid',$invoiceItem['product_id'], ':aid', $invoiceItem['attr2']['aid'] ) or die(htmlsafe(end($dbh->errorInfo())));
             $invoiceItem['attr_all_2'] = $attr_all_2->fetchAll();
-
             
 			$attr3 = dbQuery($attr_sql, ':attr_id', $invoiceItem['attribute_3'], ':pid',$invoiceItem['product_id']) or die(htmlsafe(end($dbh->errorInfo())));
             $invoiceItem['attr3'] = $attr3->fetch();
