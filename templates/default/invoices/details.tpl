@@ -241,6 +241,7 @@
 							</td>
 						{/section}
 						<td>
+					
 							<input id="unit_price{$line|htmlsafe}" name="unit_price{$line|htmlsafe}" size="7" value="{$invoiceItem.unit_price|siLocal_number_clean}" />
 						</td>
 						<td>

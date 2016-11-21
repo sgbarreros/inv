@@ -1986,7 +1986,7 @@ function updateInvoice($invoice_id) {
 		);
 }
 
-function insertInvoiceItem($invoice_id,$quantity,$product_id,$line_number,$line_item_tax_id,$description="", $unit_price="") {
+function insertInvoiceItem($invoice_id,$quantity,$product_id,$line_number,$line_item_tax_id,$description="", $unit_price="",$cost) {
 
 	global $logger;
 	global $LANG;
@@ -2026,7 +2026,8 @@ function insertInvoiceItem($invoice_id,$quantity,$product_id,$line_number,$line_
 				unit_price, 
 				tax_amount, 
 				gross_total, 
-				description, 
+				description,
+				cost, 
 				total
 			) 
 			VALUES 
@@ -2037,7 +2038,8 @@ function insertInvoiceItem($invoice_id,$quantity,$product_id,$line_number,$line_
 				:unit_price, 
 				:tax_amount, 
 				:gross_total, 
-				:description, 
+				:description,
+				:cost, 
 				:total
 			)";
 
@@ -2052,6 +2054,7 @@ function insertInvoiceItem($invoice_id,$quantity,$product_id,$line_number,$line_
 		':tax_amount', $tax_total,
 		':gross_total', $gross_total,
 		':description', $description,
+		':cost', $cost,
 		':total', $total
 		);
 	
@@ -2173,7 +2176,7 @@ function invoice_item_tax($invoice_item_id,$line_item_tax_id,$unit_price,$quanti
 	//TODO fix this
 	return true;
 }
-function updateInvoiceItem($id,$quantity,$product_id,$line_number,$line_item_tax_id,$description,$unit_price) {
+function updateInvoiceItem($id,$quantity,$product_id,$line_number,$line_item_tax_id,$description,$unit_price,$cost) {
 
 	global $logger;
 	global $LANG;
@@ -2211,6 +2214,7 @@ function updateInvoiceItem($id,$quantity,$product_id,$line_number,$line_item_tax
 	tax_amount = :tax_amount,
 	gross_total = :gross_total,
 	description = :description,
+	cost = :cost,
 	total = :total			
 	WHERE id = :id";
 	
@@ -2223,6 +2227,7 @@ function updateInvoiceItem($id,$quantity,$product_id,$line_number,$line_item_tax
 		':tax_amount', $tax_total,
 		':gross_total', $gross_total,
 		':description', $description,
+		':cost', $cost,
 		':total', $total,
 		':id', $id
 		);

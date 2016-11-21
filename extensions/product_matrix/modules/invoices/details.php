@@ -50,6 +50,7 @@ $smarty -> assign("taxes",$taxes);
 $smarty -> assign("preferences",$preferences);
 $smarty -> assign("products",$products);
 $smarty -> assign("customFields",$customFields);
+$smarty -> assign("cost",$cost);
 $smarty -> assign("lines",$lines);
 
 $js =<<<EOD
