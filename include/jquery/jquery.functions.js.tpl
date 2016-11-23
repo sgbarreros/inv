@@ -196,6 +196,12 @@
 		$("#unit_price"+rowID_new, clonedRow).attr("name", "unit_price"+rowID_new);
 		$("#unit_price"+rowID_new, clonedRow).val("");
 		$("#unit_price"+rowID_new, clonedRow).removeClass("validate[required]");
+		
+//Sergio 11.23.2016 added for cost update on invoice line edit.
+		$("#cost"+rowID_old, clonedRow).attr("id", "cost"+rowID_new);
+		$("#cost"+rowID_new, clonedRow).attr("name", "cost"+rowID_new);
+		$("#cost"+rowID_new, clonedRow).val("");
+		//$("#cost"+rowID_new, clonedRow).removeClass("validate[required]");
 	
 		$("#description"+rowID_old, clonedRow).attr("id", "description"+rowID_new);
 		$("#description"+rowID_new, clonedRow).attr("name", "description"+rowID_new);
