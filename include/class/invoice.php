@@ -91,7 +91,8 @@ class invoice {
 					unit_price, 
 					tax_amount, 
 					gross_total, 
-					description, 
+					description,
+					cost, 
 					total
 				) 
 				VALUES 
@@ -102,7 +103,8 @@ class invoice {
 					:unit_price, 
 					:tax_amount, 
 					:gross_total, 
-					:description, 
+					:description,
+					:cost, 
 					:total
 				)";
 
@@ -118,6 +120,7 @@ class invoice {
 			':gross_total', $this->gross_total,
 
 			':description', $this->description,
+			':cost', $this->cost,
 			':total', $this->total
 
 			);

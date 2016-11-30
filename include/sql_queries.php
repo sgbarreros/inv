@@ -1986,7 +1986,7 @@ function updateInvoice($invoice_id) {
 		);
 }
 
-function insertInvoiceItem($invoice_id,$quantity,$product_id,$line_number,$line_item_tax_id,$description="", $unit_price="",$cost) {
+function insertInvoiceItem($invoice_id,$quantity,$product_id,$line_number,$line_item_tax_id,$description="", $unit_price="",$cost="") {
 
 	global $logger;
 	global $LANG;

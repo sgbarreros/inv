@@ -237,13 +237,19 @@
                                 {if $smarty.section.line.index == "0"} class="validate[required]" {/if}
 							/>
 						</td>
-						<td><input type="text" id="cost" size="7" 
-						{if $smarty.get.unit_price.$lineNumber}
-								    value="{$smarty.get.unit_price.$lineNumber}"
+						<td>
+							<input 
+								id="cost{$smarty.section.line.index|htmlsafe}" 
+								name="cost{$smarty.section.line.index|htmlsafe}" 
+								size="7"
+								{if $smarty.get.cost.$lineNumber}
+								    value="{$smarty.get.cost.$lineNumber}"
 								{else}
 								   value=""
 								{/if}
-						/></td>	
+                                {if $smarty.section.line.index == "0"} class="validate[required]" {/if}
+							/>
+						</td>
 					</tr>
 							
 					<tr class="note">
